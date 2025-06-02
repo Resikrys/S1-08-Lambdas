@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class PrintStringList {
-    public static List<String> names = Arrays.asList("Yue", "Happy", "Chusky", "Leona", "Fosca");
+    public static List<String> names = Arrays.asList("Yue", "Happy", "Chusky", "Leona", "Fosca", "Mooney");
     public static List<String> namesWithO = filterStringsWIthO(names);
 
 
@@ -15,7 +15,7 @@ public class PrintStringList {
     public static List<String> filterStringsWIthO(List<String> list) {
         System.out.println("Words that contain letter 'o':");
         return list.stream()
-                .filter(p -> p.contains("o"))
+                .filter(name -> name.contains("o"))
                 .collect(Collectors.toList());
     }
 
