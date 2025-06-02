@@ -18,5 +18,6 @@ public class Task8 {
         System.out.println("Pi value is: " + piValue.getPiValue());
 
         SortStrings.sortNamesFromShortestToLargest(randomNames);
+        SortStrings.sortNamesFromLongestToShortest(randomNames);
     }
 }
