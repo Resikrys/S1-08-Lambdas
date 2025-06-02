@@ -6,11 +6,14 @@ import static s1_08_lambdas_lvl1.PrintStringListFilterLength.namesWithOAndLength
 
 public class Task8 {
     public static void main(String[] args) {
+        PiInterface piValue = () -> 3.1415;
 
         namesWithO.forEach(System.out::println);
         namesWithOAndLength5.forEach(System.out::println);
 
         PrintMonths.printMonths(MONTHS);
         PrintMonths.printMonthsReference(MONTHS);
+
+        System.out.println("Pi value is: " + piValue.getPiValue());
     }
 }
