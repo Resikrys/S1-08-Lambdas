@@ -9,6 +9,8 @@ public class Task8 {
 
         namesWithO.forEach(System.out::println);
         namesWithOAndLength5.forEach(System.out::println);
+
         PrintMonths.printMonths(MONTHS);
+        PrintMonths.printMonthsReference(MONTHS);
     }
 }

@@ -12,5 +12,10 @@ public class PrintMonths {
         System.out.println("Months in a year:");
         MONTHS.forEach(month -> System.out.println(month));
     }
+
+    public static void printMonthsReference(List<String> list) {
+        System.out.println("Months in a year using Reference:");
+        MONTHS.forEach(System.out::println);
+    }
 }
 
