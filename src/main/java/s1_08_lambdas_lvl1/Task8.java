@@ -8,9 +8,9 @@ import static s1_08_lambdas_lvl1.SortStrings.randomNames;
 public class Task8 {
     public static void main(String[] args) {
         PiInterface piValue = () -> 3.1415;
-        ReverseInterface reversor = newString -> new StringBuilder(newString).reverse().toString();
+        ReverseInterface reverser = newString -> new StringBuilder(newString).reverse().toString();
         String stringTobeReversed = "Banana";
-        String stringReversed = reversor.reverse(stringTobeReversed);
+        String stringReversed = reverser.reverse(stringTobeReversed);
 
         namesWithO.forEach(System.out::println);
         namesWithOAndLength5.forEach(System.out::println);
