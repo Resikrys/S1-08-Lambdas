@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 public class IntegerFilter {
     //Array
-    public static Integer nums[] = new Integer[] { 2, 13, 36, 42, 97, 213, 1412 };
+    public static Integer nums[] = new Integer[]{2, 13, 36, 42, 97, 213, 1412};
     public static List<Integer> intList = Arrays.asList(nums);
     public static List<String> sortedNums = oddEvenIntegerFilter(intList);
 

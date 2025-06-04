@@ -6,22 +6,21 @@ import static s1_08_lambdas_lvl2.MixList.*;
 
 public class Task8 {
     public static void main(String[] args) {
-        float x = 2.13F;
-        float y = 7.7F;
-        Operation addition = () -> x+y;
-        Operation substraction = () -> x-y;
-        Operation multiplication = () -> x*y;
-        Operation division = () -> x/y;
+        float x = 12F;
+        float y = 2.5F;
+        Calculator calculator = new Calculator();
+
 
         namesWithAAndLength3.forEach(System.out::println);
 
         System.out.println(String.join(", ", sortedNums));
 
 
-        System.out.println(x + " + " + y + " = " + addition.getResult());
-        System.out.println(x + " - " + y + " = " + substraction.getResult());
-        System.out.println(x + " * " + y + " = " + multiplication.getResult());
-        System.out.println(x + " / " + y + " = " + division.getResult());
+        System.out.println(x + " + " + y + " = " +
+                calculator.addition.getResult(x, y));
+        System.out.println(calculator.substraction.getResult(x, y));
+        System.out.println(x + " * " + y + " = " + calculator.multiplication.getResult(3, 324));
+        System.out.println(x + " / " + y + " = " + calculator.division.getResult(x, y));
 
         MixList.alphabeticalListSorter(stringsAndIntList);
 
