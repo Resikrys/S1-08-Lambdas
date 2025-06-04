@@ -3,7 +3,6 @@ package s1_08_lambdas_lvl2;
 import static s1_08_lambdas_lvl2.IntegerFilter.sortedNums;
 import static s1_08_lambdas_lvl2.ListFilter.namesWithAAndLength3;
 import static s1_08_lambdas_lvl2.MixList.*;
-//import static s1_08_lambdas_lvl2.MixList.stringsWithE;
 
 public class Task8 {
     public static void main(String[] args) {
@@ -31,6 +30,8 @@ public class Task8 {
 
         System.out.println("Replacing letter 'a' to '4':");
         replacedLettersList.forEach(System.out::println);
+
+        MixList.filterNumericStrings(stringsAndIntList);
 
     }
 }

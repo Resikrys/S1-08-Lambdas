@@ -1,6 +1,5 @@
 package s1_08_lambdas_lvl2;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -36,6 +35,13 @@ public class MixList {
         return list.stream()
                 .map(itemList -> itemList.replace("a", "4"))
                 .collect(Collectors.toList());
+    }
+
+    public static void filterNumericStrings(List<String> list) {
+        System.out.println("Numbers in the list:");
+         list.stream()
+                .filter(listItem -> listItem.matches("\\d+"))
+                 .forEach(System.out::println);
     }
 
 
