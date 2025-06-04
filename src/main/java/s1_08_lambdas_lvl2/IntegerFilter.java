@@ -13,7 +13,7 @@ public class IntegerFilter {
     public static List<String> oddEvenIntegerFilter(List<Integer> list) {
         return list.stream()
                 .map(num -> (num % 2 == 0 ? "e" : "o") + num)
-                .collect(Collectors.toList());
+                .toList();
     }
 
 }

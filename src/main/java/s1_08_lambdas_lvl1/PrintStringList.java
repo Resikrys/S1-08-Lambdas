@@ -12,7 +12,7 @@ public class PrintStringList {
         System.out.println("Words that contain letter 'o':");
         return list.stream()
                 .filter(name -> name.contains("o"))
-                .collect(Collectors.toList());
+                .toList();
     }
 
 }
