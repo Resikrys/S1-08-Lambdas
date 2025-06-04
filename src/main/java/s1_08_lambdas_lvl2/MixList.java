@@ -8,22 +8,35 @@ import java.util.stream.Collectors;
 
 public class MixList {
     public static List<String> stringsAndIntList = Arrays.asList("Yellow", "Magenta", "Cian", "213", "1412", "007", "Banana");
-    //public static List<String> stringsWithE = filterStringsWIthE(stringsAndIntList);
+    public static List<String> sortedByEList = filterStringsWithE(stringsAndIntList);
+    public static List<String> replacedLettersList = replaceAWith4(stringsAndIntList);
 
 //    public static void alphabeticalListSorter(List<String> list) {
 //        stringsAndIntList.stream().sorted().forEachOrdered(System.out::println);
 //    }
     public static void alphabeticalListSorter(List<String> list) {
+        System.out.println("List sorted in alphabetical order:");
         list.stream()
             .sorted(Comparator.comparingInt(listItem -> listItem.charAt(0)))
             .forEach(System.out::println);
 }
 
-//    public static List<String> filterStringsWIthE(List<String> list) {
-//        System.out.println("Words that contain letter 'e' go first:");
-//        return list.stream()
-//                .filter(item -> item.contains("e"))
-//                .sorted().toList((item1, item2) -> item1.contains("e")).compareTo(item2.contains("e"))
-//                .collect(Collectors.toList());
-//    }
+    public static List<String> filterStringsWithE(List<String> list) {
+        return list.stream()
+//                .sorted((listItem1, listItem2) -> {
+//                    boolean listItem1HasE = listItem1.contains("e");
+//                    boolean listItem2HasE = listItem2.contains("e");
+//                    return Boolean.compare(!listItem1HasE, !listItem2HasE);
+//                })
+                .sorted(Comparator.comparing(listItem -> !listItem.contains("e")))
+                .collect(Collectors.toList());
+    }
+
+    public static List<String> replaceAWith4(List<String> list) {
+        return list.stream()
+                .map(itemList -> itemList.replace("a", "4"))
+                .collect(Collectors.toList());
+    }
+
+
 }

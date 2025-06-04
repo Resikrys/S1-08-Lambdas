@@ -1,9 +1,8 @@
 package s1_08_lambdas_lvl2;
 
-import static s1_08_lambdas_lvl1.PrintStringListFilterLength.namesWithOAndLength5;
 import static s1_08_lambdas_lvl2.IntegerFilter.sortedNums;
 import static s1_08_lambdas_lvl2.ListFilter.namesWithAAndLength3;
-import static s1_08_lambdas_lvl2.MixList.stringsAndIntList;
+import static s1_08_lambdas_lvl2.MixList.*;
 //import static s1_08_lambdas_lvl2.MixList.stringsWithE;
 
 public class Task8 {
@@ -26,7 +25,12 @@ public class Task8 {
         System.out.println(x + " / " + y + " = " + division.getResult());
 
         MixList.alphabeticalListSorter(stringsAndIntList);
-        //MixList.filterStringsWIthE(stringsAndIntList);
-       // stringsWithE.forEach(System.out::println);
+
+        System.out.println("Words that contain letter 'e' go first:");
+        sortedByEList.forEach(System.out::println);
+
+        System.out.println("Replacing letter 'a' to '4':");
+        replacedLettersList.forEach(System.out::println);
+
     }
 }
